@@ -7,11 +7,31 @@
     class="d-flex align-items-center justify-content-center text-center text-white font-weight-bold m-0 w-100 h-100"
   >
     <div>
-      <h4 class="font-shadows my-3">akshaykarajgikar@gmail.com</h4>
-      <a href="google.com" class="text-white"
+      <div>
+        <h4
+          class="d-inline-block align-middle font-shadows"
+          (click)="copyText('akshaykarajgikar@gmail.com')"
+        >
+          akshaykarajgikar@gmail.com
+        </h4>
+        &nbsp;
+        <button
+          (click)="copyText('akshaykarajgikar@gmail.com')"
+          class="d-inline-block align-middle btn bg-white rounded-lg mb-2"
+        >
+          <i class="far fa-copy"></i>&nbsp;<span
+            id="email"
+            class="font-oswald font-weight-bold"
+            >Copy</span
+          >
+        </button>
+      </div>
+      <a href="https://github.com/akshaykarajgikar" class="text-white"
         ><h4 class="font-shadows my-3">Github</h4></a
       >
-      <a href="google.com" class="text-white"
+      <a
+        href="https://www.linkedin.com/in/akshay-k-880476124"
+        class="text-white"
         ><h4 class="font-shadows my-3">LinkedIn</h4></a
       >
       <img
