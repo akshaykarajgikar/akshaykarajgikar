@@ -1,0 +1,30 @@
+<div
+  class="position-relative px-1 px-md-5 overflow-auto animate-block h-100"
+  style="height: 80vh;"
+  [ngClass]="{ show: showContent == true }"
+>
+  <div class="row text-center text-white m-0 font-shadows">
+    <div class="col-12">
+      <h6 class="text-white">Looks like it's broken,</h6>
+    </div>
+    <div class="col-12">
+      <h1 style="font-size: 90px;">
+        40<span
+          style="
+            display: inline-block;
+            transform: rotate(70deg) translateX(40px);
+          "
+          >4</span
+        >
+      </h1>
+    </div>
+    <div class="col-12 mt-4">
+      <a [routerLink]="['/']"
+        ><h2 class="text-white">
+          <span style="font-size: 1rem;"><i class="fas fa-arrow-left"></i></span
+          >&nbsp;Go Back Home
+        </h2></a
+      >
+    </div>
+  </div>
+</div>

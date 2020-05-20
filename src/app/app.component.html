@@ -1,0 +1,56 @@
+<div class="cursor">
+  <div class="cursor_inner"></div>
+</div>
+<div
+  class="loader"
+  [ngClass]="{
+    show: showLoadingIndicator == true
+  }"
+></div>
+<div class="bg-black">
+  <header>
+    <div
+      class="d-flex align-items-center justify-content-between h-100 pr-0 pr-md-5"
+    >
+      <div></div>
+      <div>
+        <a
+          class="text-white font-weight-bold font-oswald mx-3 text-decoration-none nav-links"
+          [routerLink]="['/']"
+          >Home</a
+        >
+        <a
+          class="text-white font-weight-bold font-oswald mx-3 text-decoration-none nav-links"
+          [routerLink]="['/projects']"
+          >Projects</a
+        >
+        <a
+          class="text-white font-weight-bold font-oswald mx-3 text-decoration-none nav-links"
+          [routerLink]="['/about']"
+          >About me</a
+        >
+        <a
+          class="text-white font-weight-bold font-oswald mx-3 text-decoration-none nav-links"
+          [routerLink]="['/contact']"
+          >Contact</a
+        >
+      </div>
+    </div>
+  </header>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+  <footer>
+    <div
+      class="d-flex align-items-center justify-content-center font-oswald font-weight-bold text-white h-100"
+    >
+      <h5 class="m-0 pr-1">Crafted with</h5>
+      <span class="px-2"><i class="fab fa-html5 fa-2x"></i> </span>
+      <span class="px-2"><i class="fab fa-sass fa-2x"></i> </span>
+      <span class="px-2"><i class="fas fa-code fa-2x"></i> </span>
+      <span class="px-2"><i class="fab fa-figma fa-2x"></i> </span>
+      <span class="px-2"><i class="fab fa-angular fa-2x"></i> </span>
+      <span class="px-2"><i class="fab fa-bootstrap fa-2x"></i> </span>
+    </div>
+  </footer>
+</div>

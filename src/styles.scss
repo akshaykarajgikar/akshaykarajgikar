@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Shadows+Into+Light&display=swap");
+
+/************************************ Index ******************************************/
+/*************************************************************************************/
+
+//1. Declarations
+//2. Reset
+//3. Scroll styles
+//4. Cursor styles
+//5. Loader styles
+//6. Custom styles
+//7. Background animated code on index page
+
+/*************************************** Declarations ******************************************/
+:root {
+  --colorBlack: #000000;
+  --colorWhite: #ffffff;
+  --colorYellow: #c5c512;
+  --colorGrey: grey;
+
+  --font-family1: "Oswald", sans-serif;
+  --font-family2: "Shadows Into Light", cursive;
+  --font-family3: monaco, Consolas, "Lucida Console", monospace;
+}
+
+/*************************************** Reset ******************************************/
+* {
+  cursor: none !important;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color1);
+  color: var(--color1);
+}
+
+header,
+footer {
+  height: 10vh;
+}
+section {
+  height: 80vh;
+}
+
+/*************************************** Scroll Styles ******************************************/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--colorWhite);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--colorBlack);
+  border-radius: 30%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--colorGrey);
+}
+
+/*************************************** Cursor Styles ******************************************/
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.2rem;
+  //   background-color: var(--cursor-color);
+  background-color: var(--colorWhite);
+  border-radius: 50%;
+  // mix-blend-mode: difference;
+  transition: transform 200ms ease;
+  z-index: 1000;
+  transform: scale(0.8);
+}
+.cursor_inner {
+  transition: transform 300ms ease;
+  background-color: rgba(255, 255, 255, 0.5);
+  // mix-blend-mode: difference;
+  z-index: 1000;
+  padding: 0.5rem;
+  border-radius: 50%;
+  overflow: visible;
+}
+@media (hover: none) {
+  .cursor {
+    display: none !important;
+  }
+  .cursor_inner {
+    display: none !important;
+  }
+}
+
+/*************************************** Loader styles ******************************************/
+.loader {
+  position: fixed;
+  z-index: 1000 !important;
+  background-color: var(--colorWhite);
+  width: 200vw;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 500ms ease-in-out;
+}
+.loader.show {
+  transform: translateX(0%);
+  transition: transform 500ms ease-in-out;
+}
+
+.animate-block {
+  opacity: 0;
+  transform: translateX(-3%);
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+.animate-block.show {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+/*************************************** Custom Styles ******************************************/
+.font-oswald {
+  font-family: var(--font-family1) !important;
+  letter-spacing: 0.07rem;
+}
+.font-shadows {
+  font-family: var(--font-family2) !important;
+  letter-spacing: 0.12rem;
+}
+.font-monospace {
+  font-family: var(--font-family3) !important;
+}
+
+.text-black {
+  color: var(--colorBlack) !important;
+}
+.text-white {
+  color: var(--colorWhite) !important;
+}
+.text-yellow {
+  color: var(--colorYellow) !important;
+}
+.text-grey {
+  color: var(--colorGrey) !important;
+}
+
+.bg-black {
+  background-color: var(--colorBlack) !important;
+}
+.bg-white {
+  background-color: var(--colorWhite) !important;
+}
+.bg-yellow {
+  background-color: var(--colorYellow) !important;
+}
+.bg-gray {
+  background-color: var(--colorGray) !important;
+}
+
+.border-black {
+  border-color: var(--colorBlack) !important;
+}
+.border-white {
+  border-color: var(--colorWhite) !important;
+}
+.border-yellow {
+  border-color: var(--colorYellow) !important;
+}
+.border-gray {
+  border-color: var(--colorGray) !important;
+}
+
+/******************************* Background animated code on Index page ******************************/
+#backgroundCode {
+  font-family: var(--font-family3);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 27px;
+  word-spacing: initial;
+  margin: 0;
+  padding: 0;
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 0%;
+  left: 2%;
+  /* transform: translate(-50%,  0%); */
+  filter: blur(3.9px);
+  z-index: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.tags {
+  color: #e736d6;
+}
+
+.elements {
+  color: #7ff67c;
+}
+
+.ids {
+  color: #fff281;
+}
+
+.outer {
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.outer .typewriter-text {
+  width: 0%;
+  display: flex;
+  overflow: hidden;
+}
+
+.outer:nth-child(1n + 0) .typewriter-text {
+  animation: typing 1700ms steps(20, end), blink 500ms step-end 4;
+  animation-fill-mode: forwards;
+}
+
+.outer:nth-child(1) .typewriter-text {
+  animation-delay: 500ms;
+}
+
+.outer:nth-child(2) .typewriter-text {
+  animation-delay: 2300ms;
+}
+
+.outer:nth-child(3) .typewriter-text {
+  animation-delay: 4000ms;
+}
+
+.outer:nth-child(4) .typewriter-text {
+  animation-delay: 6000ms;
+}
+
+.outer:nth-child(5) .typewriter-text {
+  animation-delay: 8000ms;
+}
+
+.outer:nth-child(6) .typewriter-text {
+  animation-delay: 10000ms;
+}
+
+.outer:nth-child(7) .typewriter-text {
+  animation-delay: 12000ms;
+}
+
+.outer:nth-child(8) .typewriter-text {
+  animation-delay: 14000ms;
+}
+
+.outer:nth-child(9) .typewriter-text {
+  animation-delay: 16000ms;
+}
+
+.outer:nth-child(10) .typewriter-text {
+  animation-delay: 18000ms;
+}
+
+.outer:nth-child(11) .typewriter-text {
+  animation-delay: 20000ms;
+}
+
+.outer:nth-child(12) .typewriter-text {
+  animation-delay: 22000ms;
+}
+
+.outer:nth-child(13) .typewriter-text {
+  animation: typing 1700ms 24000ms steps(20, end),
+    blink 500ms 24000ms step-end infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-right: 4px solid transparent;
+  }
+
+  50% {
+    border-right: 4px solid var(--colorWhite);
+  }
+}
+
+@media (min-width: 576px) {
+  .nav-links {
+    font-size: 1.3rem;
+  }
+}

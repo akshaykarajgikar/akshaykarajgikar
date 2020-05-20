@@ -1,0 +1,112 @@
+<div
+  class="position-relative px-1 px-md-5 overflow-auto animate-block"
+  style="height: 80vh;"
+  [ngClass]="{ show: showContent == true }"
+>
+  <div
+    class="position-absolute d-none d-md-block"
+    style="left: 50%; top: 49%; transform: translate(-50%, -50%);"
+  >
+    <svg
+      width="694"
+      height="393"
+      viewBox="0 0 694 393"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="macbook">
+        <g id="Laptop">
+          <g id="bottom">
+            <path
+              id="Rectangle 1"
+              d="M63 0.5H634C644.77 0.5 653.5 9.23045 653.5 20V359.5H43.5V20C43.5 9.23046 52.2304 0.5 63 0.5Z"
+              fill="#FDFDFD"
+              stroke="#DAE1EA"
+            />
+            <path
+              id="webcam"
+              d="M346 16.1783C348.209 16.1783 350 14.3475 350 12.0891C350 9.83077 348.209 8 346 8C343.791 8 342 9.83077 342 12.0891C342 14.3475 343.791 16.1783 346 16.1783Z"
+              stroke="#8492A5"
+              stroke-width="2"
+            />
+            <path
+              id="Shape"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M640.812 391.701H51.288C20.641 391.701 0 380.951 0 376.379V362.482C0 361.108 1.335 360 2.995 360H689.104C690.766 360 692.103 361.108 692.103 362.482V376.926C692.096 380.54 676.112 391.701 640.812 391.701Z"
+              fill="#FDFDFD"
+              stroke="#DAE1EA"
+              stroke-width="2"
+            />
+            <path
+              id="Line"
+              d="M0.5 374.823H690.243"
+              stroke="#DAE1EA"
+              stroke-linecap="square"
+            />
+          </g>
+          <g id="touchpad">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M421 361.022V364.178C421 366.428 416.667 367.108 413.387 367.108H278.815C275.364 367.108 271 366.429 271 364.178V361.022"
+              fill="white"
+            />
+            <path
+              d="M421 361.022V364.178C421 366.428 416.667 367.108 413.387 367.108H278.815C275.364 367.108 271 366.429 271 364.178V361.022"
+              stroke="#BDC7D5"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div
+    class="row align-items-center justify-content-center text-white m-0 h-100"
+  >
+    <div
+      class="project-slider-container swiper-container"
+      [swiper]="projectSliderConfig"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <span class="project-image">
+            <a href="#" class="text-decoration-none">
+              <img src="./../../../assets/project-1.gif" alt="" />
+            </a>
+          </span>
+          <div
+            class="project-links text-center text-yellow font-weight-bold pt-0 pt-md-2"
+          >
+            <h5 class="font-shadows m-0">
+              ONGOING PROJECT, sit tight, will be avaialble soon
+            </h5>
+            <a [routerLink]="['/projects']" class="font-monospace"
+              ><i class="fas fa-lock"></i>&nbsp;Code proprietary</a
+            >
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <span class="project-image">
+            <a href="#" class="text-decoration-none">
+              <img src="./../../../assets/project-2.gif" alt="" />
+            </a>
+          </span>
+          <div
+            class="project-links text-center text-yellow font-weight-bold pt-0 pt-md-2"
+          >
+            <h5 class="font-shadows m-0">
+              ONGOING PROJECT, sit tight, will be avaialble soon
+            </h5>
+            <a [routerLink]="['/projects']" class="font-monospace"
+              ><i class="fas fa-lock"></i>&nbsp;Code proprietary</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</div>

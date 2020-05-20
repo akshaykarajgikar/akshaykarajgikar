@@ -1,0 +1,30 @@
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  transition: opacity 600ms ease-in-out;
+  opacity: 0;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  outline: none;
+  &::after {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    background-color: var(--colorWhite);
+    border-radius: 50%;
+    padding: 9px 15px;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.1;
+}
+
+.swiper-slide-active {
+  z-index: 5;
+  opacity: 1;
+}
