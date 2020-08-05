@@ -28,3 +28,9 @@
   z-index: 5;
   opacity: 1;
 }
+
+@media (max-width: 600px) {
+  .project-image a img {
+    width: 100%;
+  }
+}
