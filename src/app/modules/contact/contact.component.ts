@@ -29,4 +29,8 @@ export class ContactComponent implements OnInit {
       document.querySelector("#email").innerHTML = "Copy";
     }, 3000);
   }
+
+  sendEmail() {
+    window.open("mailto:akshaykarajgikar@gmail.com");
+  }
 }
